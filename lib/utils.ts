@@ -1,6 +1,6 @@
 import { type ClassValue, clsx } from "clsx";
 import { twMerge } from "tailwind-merge";
-
+import { OrderStatus } from "@/types";  // or wherever your types are defined
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
 }
