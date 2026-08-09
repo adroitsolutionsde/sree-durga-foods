@@ -1,0 +1,78 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 30 50% 98%;
+    --foreground: 20 30% 12%;
+    --card: 0 0% 100%;
+    --card-foreground: 20 30% 12%;
+    --primary: 345 75% 31%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 30 25% 92%;
+    --secondary-foreground: 20 30% 12%;
+    --muted: 30 25% 92%;
+    --muted-foreground: 25 15% 42%;
+    --accent: 45 100% 50%;
+    --accent-foreground: 20 30% 12%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 30 20% 88%;
+    --input: 30 20% 88%;
+    --ring: 345 75% 31%;
+    --radius: 0.75rem;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-cream text-brown-dark font-serif antialiased;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center justify-center rounded-xl bg-gradient-to-r from-maroon to-maroon-light px-6 py-3 text-sm font-semibold text-white shadow-premium transition-all duration-200 hover:-translate-y-0.5 hover:shadow-lg active:translate-y-0;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center rounded-xl border border-maroon bg-white px-6 py-3 text-sm font-semibold text-maroon transition-all duration-200 hover:bg-maroon/5;
+  }
+
+  .btn-ghost {
+    @apply inline-flex items-center justify-center rounded-xl bg-white/15 px-6 py-3 text-sm font-semibold text-white backdrop-blur-md transition-all duration-200 hover:bg-white/25;
+  }
+
+  .card {
+    @apply rounded-2xl border border-border bg-white shadow-card transition-shadow duration-200 hover:shadow-card-hover;
+  }
+
+  .input {
+    @apply w-full rounded-lg border border-border bg-white px-4 py-3 text-sm text-brown-dark outline-none transition-colors placeholder:text-brown-light focus:border-maroon;
+  }
+
+  .section-title {
+    @apply text-center;
+  }
+
+  .section-title-label {
+    @apply text-xs font-medium uppercase tracking-[0.15em] text-maroon;
+  }
+
+  .section-title-heading {
+    @apply mt-2 text-2xl font-bold text-brown-dark md:text-3xl;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}

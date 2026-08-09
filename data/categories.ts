@@ -1,0 +1,68 @@
+import { Category } from "@/types";
+
+export const categories: Category[] = [
+  {
+    id: "cat-1",
+    name: "Traditional Snacks",
+    slug: "traditional-snacks",
+    description: "Crispy, crunchy snacks made the Tamil way",
+    image: "https://images.unsplash.com/photo-1606491956689-2ea866880c84?w=400&q=80",
+    productCount: 12,
+  },
+  {
+    id: "cat-2",
+    name: "Sweets",
+    slug: "sweets",
+    description: "Authentic Tamil Nadu sweets and desserts",
+    image: "https://images.unsplash.com/photo-1606313564200-e75d5e30476d?w=400&q=80",
+    productCount: 8,
+  },
+  {
+    id: "cat-3",
+    name: "Savouries",
+    slug: "savouries",
+    description: "Spicy and flavourful savoury treats",
+    image: "https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=400&q=80",
+    productCount: 10,
+  },
+  {
+    id: "cat-4",
+    name: "Traditional Powders",
+    slug: "traditional-powders",
+    description: "Freshly ground spice and curry powders",
+    image: "https://images.unsplash.com/photo-1596040033229-a9821ebd058d?w=400&q=80",
+    productCount: 6,
+  },
+  {
+    id: "cat-5",
+    name: "Pickles",
+    slug: "pickles",
+    description: "Homemade pickles with traditional recipes",
+    image: "https://images.unsplash.com/photo-1597362925123-77861d3fbac7?w=400&q=80",
+    productCount: 7,
+  },
+  {
+    id: "cat-6",
+    name: "Spice Blends",
+    slug: "spice-blends",
+    description: "Signature masala and spice mixtures",
+    image: "https://images.unsplash.com/photo-1532336414038-cf19250c5757?w=400&q=80",
+    productCount: 5,
+  },
+  {
+    id: "cat-7",
+    name: "Ready to Eat",
+    slug: "ready-to-eat",
+    description: "Convenient traditional meals",
+    image: "https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=400&q=80",
+    productCount: 4,
+  },
+  {
+    id: "cat-8",
+    name: "Gift Boxes",
+    slug: "gift-boxes",
+    description: "Curated traditional food hampers",
+    image: "https://images.unsplash.com/photo-1549465220-1a8b9238cd48?w=400&q=80",
+    productCount: 3,
+  },
+];
