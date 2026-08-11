@@ -7,6 +7,7 @@ import { CreditCard, Truck, Building2, Wallet } from "lucide-react";
 import { useCart } from "@/lib/store";
 import { formatPrice, generateOrderNumber } from "@/lib/utils";
 import { PaymentMethod } from "@/types";
+import { PAYMENT_CONFIG } from "@/lib/config";
 
 export default function CheckoutPage() {
   const router = useRouter();
@@ -53,14 +54,14 @@ export default function CheckoutPage() {
               Delivery Address
             </h2>
             <div className="mt-4 grid grid-cols-1 gap-3 sm:grid-cols-2">
-              <input type="text" placeholder="Full Name" className="input" />
-              <input type="tel" placeholder="Mobile Number" className="input" />
-              <input type="email" placeholder="Email Address" className="input sm:col-span-2" />
-              <input type="text" placeholder="House / Flat / Building" className="input sm:col-span-2" />
-              <input type="text" placeholder="Street / Area" className="input sm:col-span-2" />
-              <input type="text" placeholder="City" defaultValue="Chennai" className="input" />
-              <input type="text" placeholder="PIN Code" className="input" />
-              <input type="text" placeholder="State" defaultValue="Tamil Nadu" className="input" />
+              <input type="text" placeholder="Full Name" className="input" required />
+              <input type="tel" placeholder="Mobile Number" className="input" required />
+              <input type="email" placeholder="Email Address" className="input sm:col-span-2" required />
+              <input type="text" placeholder="House / Flat / Building" className="input sm:col-span-2" required />
+              <input type="text" placeholder="Street / Area" className="input sm:col-span-2" required />
+              <input type="text" placeholder="City" defaultValue="Chennai" className="input" required />
+              <input type="text" placeholder="PIN Code" className="input" required />
+              <input type="text" placeholder="State" defaultValue="Tamil Nadu" className="input" required />
               <input type="text" placeholder="Landmark (Optional)" className="input" />
             </div>
           </div>
@@ -100,12 +101,12 @@ export default function CheckoutPage() {
 
             {paymentMethod === "BANK_TRANSFER" && (
               <div className="mt-4 rounded-lg bg-cream-dark p-4 text-sm">
-                <p className="font-semibold text-brown-dark">Bank Details (To be provided by admin)</p>
+                <p className="font-semibold text-brown-dark">Bank Details</p>
                 <div className="mt-2 space-y-1 text-brown-light">
-                  <p>Bank Name: [To be configured]</p>
-                  <p>Account Name: [To be configured]</p>
-                  <p>Account Number: [To be configured]</p>
-                  <p>IFSC Code: [To be configured]</p>
+                  <p>Bank Name: {PAYMENT_CONFIG.bankDetails.bankName}</p>
+                  <p>Account Name: {PAYMENT_CONFIG.bankDetails.accountName}</p>
+                  <p>Account Number: {PAYMENT_CONFIG.bankDetails.accountNumber}</p>
+                  <p>IFSC Code: {PAYMENT_CONFIG.bankDetails.ifscCode}</p>
                 </div>
               </div>
             )}

@@ -2,15 +2,16 @@
 
 import { useState } from "react";
 import { Search } from "lucide-react";
+import { ORDER_STATUS_FLOW } from "@/lib/utils";
 
-const ORDER_STATUS_FLOW = [
-  { status: "Order Placed", date: "8 Aug 2026, 10:30 AM", done: true },
-  { status: "Payment Confirmed", date: "8 Aug 2026, 10:32 AM", done: true },
-  { status: "Processing", date: "8 Aug 2026, 11:00 AM", done: true },
-  { status: "Packed", date: "Pending", done: false },
-  { status: "Shipped", date: "Pending", done: false },
-  { status: "Out for Delivery", date: "Pending", done: false },
-  { status: "Delivered", date: "Expected by 9 Aug 2026", done: false },
+const ORDER_STATUS_FLOW_WITH_DATES = [
+  { status: "PLACED", label: "Order Placed", date: "8 Aug 2026, 10:30 AM", done: true },
+  { status: "PAYMENT_CONFIRMED", label: "Payment Confirmed", date: "8 Aug 2026, 10:32 AM", done: true },
+  { status: "PROCESSING", label: "Processing", date: "8 Aug 2026, 11:00 AM", done: true },
+  { status: "PACKED", label: "Packed", date: "Pending", done: false },
+  { status: "SHIPPED", label: "Shipped", date: "Pending", done: false },
+  { status: "OUT_FOR_DELIVERY", label: "Out for Delivery", date: "Pending", done: false },
+  { status: "DELIVERED", label: "Delivered", date: "Expected by 9 Aug 2026", done: false },
 ];
 
 export default function TrackOrderPage() {
@@ -41,7 +42,7 @@ export default function TrackOrderPage() {
           </h3>
           <div className="relative mt-6 pl-8">
             <div className="absolute left-3 top-0 bottom-0 w-0.5 bg-border" />
-            {ORDER_STATUS_FLOW.map((step, idx) => (
+            {ORDER_STATUS_FLOW_WITH_DATES.map((step, idx) => (
               <div key={step.status} className="relative mb-6 last:mb-0">
                 <div
                   className={`absolute -left-5 top-0.5 h-3 w-3 rounded-full border-2 ${
@@ -51,7 +52,7 @@ export default function TrackOrderPage() {
                   }`}
                 />
                 <p className={`text-sm font-semibold ${step.done ? "text-brown-dark" : "text-brown-light"}`}>
-                  {step.status}
+                  {step.label}
                 </p>
                 <p className="text-xs text-brown-light">{step.date}</p>
               </div>

@@ -1,6 +1,9 @@
 import Link from "next/link";
+import { BUSINESS_CONFIG } from "@/lib/config";
 
 export default function Footer() {
+  const { legalName, tradeName, gstNumber, address, phone, email } = BUSINESS_CONFIG;
+  
   return (
     <footer className="border-t border-border bg-white">
       <div className="mx-auto max-w-7xl px-4 py-12 md:px-6">
@@ -12,7 +15,7 @@ export default function Footer() {
                 ஸ்
               </div>
               <div>
-                <div className="text-base font-bold text-maroon">Sree Durga</div>
+                <div className="text-base font-bold text-maroon">{tradeName}</div>
                 <div className="text-[9px] uppercase tracking-[0.15em] text-brown-light">
                   Food Industries
                 </div>
@@ -22,8 +25,8 @@ export default function Footer() {
               Authentic traditional foods from Chennai, made with care and delivered to your doorstep.
             </p>
             <div className="mt-4 text-xs text-brown-light">
-              <p className="font-semibold text-brown">Legal Name: Suganya K</p>
-              <p>GST: 33FHSPS6377C1ZR</p>
+              <p className="font-semibold text-brown">Legal Name: {legalName}</p>
+              <p>GST: {gstNumber}</p>
             </div>
           </div>
 
@@ -54,22 +57,22 @@ export default function Footer() {
           <div>
             <h4 className="text-sm font-semibold text-brown-dark">Contact Us</h4>
             <address className="mt-3 not-italic text-sm leading-relaxed text-brown-light">
-              <p className="font-medium text-brown">Sree Durga Food Industries</p>
-              <p>No. 135, Village High Road</p>
-              <p>Sholinganallur, Chennai</p>
-              <p>Tamil Nadu 600119, India</p>
-              <p className="mt-2">Phone: [To be configured]</p>
-              <p>Email: [To be configured]</p>
+              <p className="font-medium text-brown">{tradeName}</p>
+              <p>{address.line1}</p>
+              <p>{address.area}, {address.city}</p>
+              <p>{address.state} {address.pincode}, {address.country}</p>
+              <p className="mt-2">Phone: {phone}</p>
+              <p>Email: {email}</p>
             </address>
           </div>
         </div>
 
         <div className="mt-10 border-t border-border pt-6 text-center text-xs text-brown-light">
           <p>
-            © {new Date().getFullYear()} Sree Durga Food Industries. All rights reserved.
+            © {new Date().getFullYear()} {tradeName}. All rights reserved.
           </p>
           <p className="mt-1">
-            Trade Name: Sree Durga Food Industries | Legal Name: Suganya K | GST: 33FHSPS6377C1ZR
+            Trade Name: {tradeName} | Legal Name: {legalName} | GST: {gstNumber}
           </p>
         </div>
       </div>

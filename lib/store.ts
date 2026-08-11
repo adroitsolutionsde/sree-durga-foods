@@ -3,6 +3,7 @@
 import { create } from "zustand";
 import { persist } from "zustand/middleware";
 import { CartItem } from "@/types";
+import { DELIVERY_CONFIG, GST_CONFIG } from "@/lib/config";
 
 interface CartState {
   items: CartItem[];
@@ -16,10 +17,6 @@ interface CartState {
   getDeliveryCharge: () => number;
   getTotal: () => number;
 }
-
-const DELIVERY_THRESHOLD = 999;
-const DELIVERY_CHARGE = 60;
-const GST_RATE = 0.05;
 
 export const useCart = create<CartState>()(
   persist(
@@ -77,11 +74,11 @@ export const useCart = create<CartState>()(
       },
 
       getGstAmount: () => {
-        return Math.round(get().getSubtotal() * GST_RATE);
+        return Math.round(get().getSubtotal() * GST_CONFIG.rate);
       },
 
       getDeliveryCharge: () => {
-        return get().getSubtotal() >= DELIVERY_THRESHOLD ? 0 : DELIVERY_CHARGE;
+        return get().getSubtotal() >= DELIVERY_CONFIG.freeThreshold ? 0 : DELIVERY_CONFIG.charge;
       },
 
       getTotal: () => {

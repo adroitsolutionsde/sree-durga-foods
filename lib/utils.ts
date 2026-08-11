@@ -1,6 +1,6 @@
 import { type ClassValue, clsx } from "clsx";
 import { twMerge } from "tailwind-merge";
-import { OrderStatus } from "@/types";
+import { ORDER_CONFIG } from "@/lib/config";
 
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
@@ -20,18 +20,10 @@ export function calculateDiscount(mrp: number, price: number): number {
 }
 
 export function generateOrderNumber(): string {
-  const prefix = "SD";
+  const prefix = ORDER_CONFIG.prefix;
   const year = new Date().getFullYear();
   const random = Math.floor(100000 + Math.random() * 900000);
   return `${prefix}${year}${random}`;
 }
 
-export const ORDER_STATUS_FLOW: OrderStatus[] = [
-  "PLACED",
-  "PAYMENT_CONFIRMED",
-  "PROCESSING",
-  "PACKED",
-  "SHIPPED",
-  "OUT_FOR_DELIVERY",
-  "DELIVERED",
-];
+export const ORDER_STATUS_FLOW = ORDER_CONFIG.statusFlow;

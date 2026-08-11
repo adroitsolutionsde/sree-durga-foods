@@ -1,7 +1,10 @@
 import { Mail, MapPin, Phone, Clock } from "lucide-react";
 import ContactForm from "./ContactForm";
+import { BUSINESS_CONFIG } from "@/lib/config";
 
 export default function ContactPage() {
+  const { address, phone, email } = BUSINESS_CONFIG;
+  
   return (
     <>
       <div className="bg-gradient-to-br from-brown-dark to-brown py-20 text-center text-white">
@@ -21,7 +24,7 @@ export default function ContactPage() {
                 <div>
                   <p className="text-xs text-brown-light">Address</p>
                   <p className="text-sm font-medium text-brown-dark">
-                    No. 135, Village High Road, Sholinganallur, Chennai 600119
+                    {address.line1}, {address.area}, {address.city}, {address.state} {address.pincode}, {address.country}
                   </p>
                 </div>
               </div>
@@ -31,7 +34,7 @@ export default function ContactPage() {
                 </div>
                 <div>
                   <p className="text-xs text-brown-light">Email</p>
-                  <p className="text-sm font-medium text-brown-dark">[To be configured]</p>
+                  <p className="text-sm font-medium text-brown-dark">{email}</p>
                 </div>
               </div>
               <div className="flex items-center gap-3">
@@ -40,7 +43,7 @@ export default function ContactPage() {
                 </div>
                 <div>
                   <p className="text-xs text-brown-light">Phone / WhatsApp</p>
-                  <p className="text-sm font-medium text-brown-dark">[To be configured]</p>
+                  <p className="text-sm font-medium text-brown-dark">{phone}</p>
                 </div>
               </div>
               <div className="flex items-center gap-3">
