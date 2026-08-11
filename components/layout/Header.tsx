@@ -5,6 +5,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Search, ShoppingCart, User, Menu, X } from "lucide-react";
 import { useCart } from "@/lib/store";
+import Logo from "./Logo";
 
 const navLinks = [
   { href: "/", label: "Home" },
@@ -25,9 +26,7 @@ export default function Header() {
         <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 md:px-6">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2.5">
-            <div className="flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-br from-maroon to-maroon-light text-lg font-bold text-gold shadow-premium">
-              ஸ்
-            </div>
+            <Logo width={32} height={32} />
             <div className="hidden sm:block">
               <div className="text-lg font-bold leading-tight tracking-wide text-maroon">
                 Sree Durga
@@ -152,7 +151,6 @@ function SearchOverlay({ onClose }: { onClose: () => void }) {
       setResults([]);
       return;
     }
-    // Dynamic import to avoid SSR issues
     import("@/data/products").then(({ searchProducts }) => {
       setResults(
         searchProducts(val).map((p) => ({ name: p.name, slug: p.slug }))
@@ -193,7 +191,7 @@ function SearchOverlay({ onClose }: { onClose: () => void }) {
         )}
         {query.length >= 2 && results.length === 0 && (
           <p className="mt-4 text-center text-sm text-brown-light">
-            No products found. Try &quot;Murukku&quot;, &quot;Pickle&quot;, or &quot;Powder&quot;.
+            No products found. Try "Murukku", "Pickle", or "Powder".
           </p>
         )}
         <div className="mt-6">

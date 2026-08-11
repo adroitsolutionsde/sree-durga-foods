@@ -6,7 +6,7 @@ export const categories: Category[] = [
     name: "Traditional Snacks",
     slug: "traditional-snacks",
     description: "Crispy, crunchy snacks made the Tamil way",
-    image: "https://images.unsplash.com/photo-1606491956689-2ea866880c84?w=400&q=80",
+    image: "/images/categories/traditional-snacks.jpg",
     productCount: 12,
   },
   {
@@ -14,7 +14,7 @@ export const categories: Category[] = [
     name: "Sweets",
     slug: "sweets",
     description: "Authentic Tamil Nadu sweets and desserts",
-    image: "https://images.unsplash.com/photo-1606313564200-e75d5e30476d?w=400&q=80",
+    image: "/images/categories/sweets.jpg",
     productCount: 8,
   },
   {
@@ -22,7 +22,7 @@ export const categories: Category[] = [
     name: "Savouries",
     slug: "savouries",
     description: "Spicy and flavourful savoury treats",
-    image: "https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=400&q=80",
+    image: "/images/categories/savouries.jpg",
     productCount: 10,
   },
   {
@@ -30,7 +30,7 @@ export const categories: Category[] = [
     name: "Traditional Powders",
     slug: "traditional-powders",
     description: "Freshly ground spice and curry powders",
-    image: "https://images.unsplash.com/photo-1596040033229-a9821ebd058d?w=400&q=80",
+    image: "/images/categories/traditional-powders.jpg",
     productCount: 6,
   },
   {
@@ -38,7 +38,7 @@ export const categories: Category[] = [
     name: "Pickles",
     slug: "pickles",
     description: "Homemade pickles with traditional recipes",
-    image: "https://images.unsplash.com/photo-1597362925123-77861d3fbac7?w=400&q=80",
+    image: "/images/categories/pickles.jpg",
     productCount: 7,
   },
   {
@@ -46,7 +46,7 @@ export const categories: Category[] = [
     name: "Spice Blends",
     slug: "spice-blends",
     description: "Signature masala and spice mixtures",
-    image: "https://images.unsplash.com/photo-1532336414038-cf19250c5757?w=400&q=80",
+    image: "/images/categories/spice-blends.jpg",
     productCount: 5,
   },
   {
@@ -54,7 +54,7 @@ export const categories: Category[] = [
     name: "Ready to Eat",
     slug: "ready-to-eat",
     description: "Convenient traditional meals",
-    image: "https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=400&q=80",
+    image: "/images/categories/ready-to-eat.jpg",
     productCount: 4,
   },
   {
@@ -62,7 +62,7 @@ export const categories: Category[] = [
     name: "Gift Boxes",
     slug: "gift-boxes",
     description: "Curated traditional food hampers",
-    image: "https://images.unsplash.com/photo-1549465220-1a8b9238cd48?w=400&q=80",
+    image: "/images/categories/gift-boxes.jpg",
     productCount: 3,
   },
 ];

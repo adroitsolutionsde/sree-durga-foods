@@ -21,8 +21,8 @@ export const products: Product[] = [
     shelfLife: "30 days",
     storage: "Store in airtight container at room temperature",
     images: [
-      "https://images.unsplash.com/photo-1606491956689-2ea866880c84?w=600&q=80",
-      "https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=600&q=80",
+      "/images/products/butter-murukku-1.jpg",
+      "/images/products/butter-murukku-2.jpg",
     ],
     isFeatured: true,
     isBestseller: true,
@@ -54,7 +54,7 @@ export const products: Product[] = [
     shelfLife: "15 days",
     storage: "Store in airtight container. Refrigerate for longer freshness.",
     images: [
-      "https://images.unsplash.com/photo-1606313564200-e75d5e30476d?w=600&q=80",
+      "/images/products/adhirasam-1.jpg",
     ],
     isFeatured: true,
     isBestseller: true,
@@ -85,7 +85,7 @@ export const products: Product[] = [
     shelfLife: "6 months",
     storage: "Store in a cool, dry place. Use dry spoon only.",
     images: [
-      "https://images.unsplash.com/photo-1597362925123-77861d3fbac7?w=600&q=80",
+      "/images/products/mango-pickle-1.jpg",
     ],
     isFeatured: false,
     isBestseller: true,
@@ -115,7 +115,7 @@ export const products: Product[] = [
     shelfLife: "3 months",
     storage: "Store in airtight container away from moisture",
     images: [
-      "https://images.unsplash.com/photo-1596040033229-a9821ebd058d?w=600&q=80",
+      "/images/products/rasam-powder-1.jpg",
     ],
     isFeatured: true,
     isBestseller: false,
@@ -145,7 +145,7 @@ export const products: Product[] = [
     shelfLife: "6 months",
     storage: "Store in airtight container away from direct sunlight",
     images: [
-      "https://images.unsplash.com/photo-1532336414038-cf19250c5757?w=600&q=80",
+      "/images/products/chettinad-masala-1.jpg",
     ],
     isFeatured: false,
     isBestseller: true,
@@ -176,7 +176,7 @@ export const products: Product[] = [
     shelfLife: "30 days",
     storage: "Store in airtight container at room temperature",
     images: [
-      "https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=600&q=80",
+      "/images/products/thattai-1.jpg",
     ],
     isFeatured: false,
     isBestseller: false,
@@ -206,7 +206,7 @@ export const products: Product[] = [
     shelfLife: "3 months",
     storage: "Store in airtight container away from moisture",
     images: [
-      "https://images.unsplash.com/photo-1596040033229-a9821ebd058d?w=600&q=80",
+      "/images/products/sambhar-powder-1.jpg",
     ],
     isFeatured: false,
     isBestseller: false,
@@ -237,8 +237,8 @@ export const products: Product[] = [
     shelfLife: "15 days (sweets), 6 months (pickle)",
     storage: "Store sweets in airtight container. Pickle in cool dry place.",
     images: [
-      "https://images.unsplash.com/photo-1549465220-1a8b9238cd48?w=600&q=80",
-      "https://images.unsplash.com/photo-1606313564200-e75d5e30476d?w=600&q=80",
+      "/images/products/diwali-gift-box-1.jpg",
+      "/images/products/diwali-gift-box-2.jpg",
     ],
     isFeatured: true,
     isBestseller: false,
@@ -264,7 +264,7 @@ export const products: Product[] = [
     shelfLife: "6 months",
     storage: "Store in cool dry place. Use dry spoon.",
     images: [
-      "https://images.unsplash.com/photo-1597362925123-77861d3fbac7?w=600&q=80",
+      "/images/products/lemon-pickle-1.jpg",
     ],
     isFeatured: false,
     isBestseller: false,
@@ -294,7 +294,7 @@ export const products: Product[] = [
     shelfLife: "2 months",
     storage: "Refrigerate for best freshness",
     images: [
-      "https://images.unsplash.com/photo-1596040033229-a9821ebd058d?w=600&q=80",
+      "/images/products/curry-leaf-powder-1.jpg",
     ],
     isFeatured: false,
     isBestseller: false,
@@ -325,7 +325,7 @@ export const products: Product[] = [
     shelfLife: "30 days",
     storage: "Store in airtight container",
     images: [
-      "https://images.unsplash.com/photo-1606491956689-2ea866880c84?w=600&q=80",
+      "/images/products/mixture-1.jpg",
     ],
     isFeatured: false,
     isBestseller: true,
@@ -355,7 +355,7 @@ export const products: Product[] = [
     shelfLife: "3 months",
     storage: "Store in airtight container away from moisture",
     images: [
-      "https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=600&q=80",
+      "/images/products/chennai-breakfast-combo-1.jpg",
     ],
     isFeatured: true,
     isBestseller: false,

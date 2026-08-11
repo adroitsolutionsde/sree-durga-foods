@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { BUSINESS_CONFIG } from "@/lib/config";
+import Logo from "./Logo";
 
 export default function Footer() {
   const { legalName, tradeName, gstNumber, address, phone, email } = BUSINESS_CONFIG;
@@ -11,9 +12,7 @@ export default function Footer() {
           {/* Brand */}
           <div className="md:col-span-1">
             <div className="flex items-center gap-2">
-              <div className="flex h-8 w-8 items-center justify-center rounded-full bg-gradient-to-br from-maroon to-maroon-light text-sm font-bold text-gold">
-                ஸ்
-              </div>
+              <Logo width={28} height={28} />
               <div>
                 <div className="text-base font-bold text-maroon">{tradeName}</div>
                 <div className="text-[9px] uppercase tracking-[0.15em] text-brown-light">

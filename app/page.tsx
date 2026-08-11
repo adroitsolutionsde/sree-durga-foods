@@ -17,11 +17,12 @@ export default function HomePage() {
       <section className="relative h-[500px] overflow-hidden bg-gradient-to-br from-brown-dark to-brown md:h-[600px]">
         <div className="absolute inset-0">
           <Image
-            src="https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=1200&q=80"
+            src="/images/hero/home-hero.jpg"
             alt="Traditional Tamil food"
             fill
             className="object-cover opacity-40"
             priority
+            unoptimized
           />
         </div>
         <div className="relative mx-auto flex h-full max-w-7xl flex-col items-center justify-center px-4 text-center text-white">
@@ -152,11 +153,12 @@ export default function HomePage() {
           </div>
           <div className="overflow-hidden rounded-2xl shadow-2xl">
             <Image
-              src="https://images.unsplash.com/photo-1606313564200-e75d5e30476d?w=600&q=80"
+              src="/images/hero/festival-banner.jpg"
               alt="Traditional Indian sweets"
               width={600}
               height={400}
               className="h-64 w-full object-cover md:h-80"
+              unoptimized
             />
           </div>
         </div>
